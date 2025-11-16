@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GorselProgOdev2.Pages.ColorPage"
+    Title="Renk Seçici">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <!-- Kırmızı -->
+        <Slider x:Name="sliderR" Maximum="255" ValueChanged="RgbSlider_ValueChanged" />
+        <Label x:Name="lblR" Text="0" />
+
+        <!-- Yeşil -->
+        <Slider x:Name="sliderG" Maximum="255" ValueChanged="RgbSlider_ValueChanged" />
+        <Label x:Name="lblG" Text="0" />
+
+        <!-- Mavi -->
+        <Slider x:Name="sliderB" Maximum="255" ValueChanged="RgbSlider_ValueChanged" />
+        <Label x:Name="lblB" Text="0" />
+
+        <!-- Hex kodu -->
+        <Label x:Name="lblHex"
+               Text="#000000"
+               FontAttributes="Bold"
+               FontSize="20"
+               HorizontalTextAlignment="Center"
+               Margin="0,10,0,10" />
+
+        <!-- Butonlar -->
+        <HorizontalStackLayout Spacing="12" HorizontalOptions="Center">
+            <Button Text="Kopyala" WidthRequest="120" Clicked="BtnCopy_Clicked" />
+            <Button Text="Rastgele Renk" WidthRequest="150" Clicked="BtnRandom_Clicked" />
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+
+</ContentPage>

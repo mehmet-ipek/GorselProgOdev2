@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GorselProgOdev2.Pages.BmiPage"
+    Title="VKİ Hesaplama">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+
+        <Label Text="Kilo (kg)" />
+        <Slider x:Name="sliderWeight" Minimum="30" Maximum="200"
+                ValueChanged="Slider_ValueChanged" />
+        <Label x:Name="lblWeight" Text="Kilo: 70" />
+
+        <Label Text="Boy (cm)" />
+        <Slider x:Name="sliderHeight" Minimum="100" Maximum="220"
+                ValueChanged="Slider_ValueChanged" />
+        <Label x:Name="lblHeight" Text="Boy: 170" />
+
+        <Label x:Name="lblBmi" Text="VKİ: -" FontAttributes="Bold" />
+        <Label x:Name="lblBmiCategory" Text="Kategori: -" />
+
+    </VerticalStackLayout>
+
+</ContentPage>

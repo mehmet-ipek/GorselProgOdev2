@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GorselProgOdev2.Pages.CreditPage"
+    Title="Kredi Hesaplama">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+
+            <Picker x:Name="pickerCreditType">
+                <Picker.Items>
+                    <x:String>İhtiyaç Kredisi</x:String>
+                    <x:String>Taşıt Kredisi</x:String>
+                    <x:String>Konut Kredisi</x:String>
+                    <x:String>Ticari Kredi</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Entry x:Name="entryAmount" Placeholder="Kredi Tutarı" Keyboard="Numeric" />
+            <Entry x:Name="entryInterest" Placeholder="Faiz (%)" Keyboard="Numeric" />
+
+            <Slider x:Name="sliderMonths"
+                    Minimum="6"
+                    Maximum="360"
+                    ValueChanged="SliderMonths_ValueChanged" />
+
+            <Label x:Name="lblMonths" Text="Vade: 12 Ay" />
+
+            <Button Text="Hesapla"
+                    Clicked="BtnCalculate_Clicked" />
+
+            <Label x:Name="lblMonthlyPayment" Text="Aylık: -" />
+            <Label x:Name="lblTotalPayment" Text="Toplam: -" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

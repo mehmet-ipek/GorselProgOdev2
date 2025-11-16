@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GorselProgOdev2.Pages.HomePage"
+    Title="Ana Sayfa">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20" HorizontalOptions="Center">
+
+            <Image Source="profile_new.jpg"
+                   WidthRequest="150"
+                   HeightRequest="150"
+                   HorizontalOptions="Center" />
+
+            <Label x:Name="lblName"
+                   Text="Mehmet İpek"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Bartın Üniversitesi"
+                   FontSize="18"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Bilgisayar Mühendisliği"
+                   FontSize="17"
+                   HorizontalOptions="Center" />
+
+            <Button Text="Kredi Hesaplama"
+                    Clicked="GoToCredit" />
+
+            <Button Text="VKİ Hesaplama"
+                    Clicked="GoToBmi" />
+
+            <Button Text="Renk Seçici"
+                    Clicked="GoToColor" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
